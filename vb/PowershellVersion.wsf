@@ -1,0 +1,37 @@
+<job id="main">
+    <script language="VBScript">
+        
+        Const HKEY_LOCAL_MACHINE = &H80000002
+
+        CheckForPowerShell("2.0")
+     
+        WScript.Quit(0)
+
+        function CheckForPowerShell(StringVersion)
+            Dim strComputer
+            Dim strKeyPath
+            Dim strValueName
+            Dim strValue
+
+            WScript.Echo "Checking for PowerShell v" & StringVersion & " ..."
+            WScript.Echo
+
+            strComputer = "."
+            strKeyPath = "Software\Microsoft\PowerShell\1\PowerShellEngine"
+            strValueName = "PowerShellVersion"
+
+            Set oReg=GetObject("winmgmts:{impersonationLevel=impersonate}!\\" & strComputer & "\root\default:StdRegProv")
+            oReg.GetStringValue HKEY_LOCAL_MACHINE, strKeyPath, strValueName, strValue
+ 
+            if isNull(strValue) then
+                WScript.Echo "PowerShell v" & StringVersion & " NOT installed"
+                WScript.Quit(1)
+            else
+                if (strValue <> StringVersion) then
+                    WScript.Echo "PowerShell v" & StringVersion & " NOT installed"
+                    WScript.Quit(1)
+                end if
+            end if
+        End Function
+    </script>
+</job>
