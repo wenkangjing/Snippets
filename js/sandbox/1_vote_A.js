@@ -1,5 +1,5 @@
 // 
-// very simple version
+// very simple version of pure redux (no react)
 // using action, reducer, store, subscribe
 // 
 import {createStore} from 'redux';
