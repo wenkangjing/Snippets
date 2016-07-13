@@ -1,9 +1,9 @@
 import React from 'react';
 import { render } from 'react-dom';
-import KeyValueList from './components/KeyValueList'
+import KeyValueTable from './components/KeyValueTable'
 
 var ITEMS = [
-  {name: 'Name', description:'  101Capital'},
+  {name: 'Name', description:'101Capital'},
   {name: 'Description', description:'101 Capital'},
   {name: 'Pro Licenses', description:'Unlimited'},
   {name: 'Trader Licenses  ', description:'Unlimited'},
@@ -18,10 +18,17 @@ var ITEMS = [
   {name: 'HTML Colors', description:'0'},
   {name: 'Menu Sets', description:'0'},
 ];
+
+//<KeyValueTable items={ITEMS} />
+var LSITS = ['101Capital','Unlimited','1','0','0'];
  
 render((
   <div>
-    <KeyValueList items={ITEMS} />
+    <ul>
+      {LSITS.map(function(item, i){
+        return <li key={i}>{item}</li>;
+      })}
+    </ul>
   </div>
   ), 
   document.getElementById('root')

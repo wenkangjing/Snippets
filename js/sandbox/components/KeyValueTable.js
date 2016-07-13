@@ -23,7 +23,7 @@ KeyValueItem.propTypes = {
   description: PropTypes.string
 }
 
-export default class KeyValueList extends Component {
+export default class KeyValueTable extends Component {
   constructor(props){
     super(props);
   }
@@ -39,7 +39,7 @@ export default class KeyValueList extends Component {
     });
 
     return (
-      <table className='KeyValueList'>
+      <table className='KeyValueTable'>
         <thead>
           <tr>
             <th></th>
