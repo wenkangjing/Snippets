@@ -1,34 +1,29 @@
 import React from 'react';
 import { render } from 'react-dom';
-import KeyValueTable from './components/KeyValueTable'
 
-var ITEMS = [
-  {name: 'Name', description:'101Capital'},
-  {name: 'Description', description:'101 Capital'},
-  {name: 'Pro Licenses', description:'Unlimited'},
-  {name: 'Trader Licenses  ', description:'Unlimited'},
-  {name: 'Apollo Company', description:''},
-  {name: 'Groups', description:'1'},
-  {name: 'Users', description:'1'},
-  {name: 'Users Logged In', description:'0'},
-  {name: 'Vendor Lists', description:'0'},
-  {name: 'Command Sets', description:'0'},
-  {name: 'Designs', description:'1'},
-  {name: 'Java Colours', description:'0'},
-  {name: 'HTML Colors', description:'0'},
-  {name: 'Menu Sets', description:'0'},
-];
+// var Connection = require('tedious').Connection;
 
-//<KeyValueTable items={ITEMS} />
-var LSITS = ['101Capital','Unlimited','1','0','0'];
+// var config = {
+//   userName: 'test',
+//   password: 'test',
+//   server: '192.168.1.210',
+  
+//   // If you're on Windows Azure, you will need this:
+//   options: {encrypt: true}
+// };
+
+// var connection = new Connection(config);
+
+// connection.on('connect', function(err) {
+//   // If no error, then good to go...
+//     executeStatement();
+//   }
+// );
  
 render((
-  <div>
-    <ul>
-      {LSITS.map(function(item, i){
-        return <li key={i}>{item}</li>;
-      })}
-    </ul>
+  <div> 
+    <h1>Test Authorization</h1>
+    <h3>Access SQL Server in a quick and dirty way via TediousJS</h3>
   </div>
   ), 
   document.getElementById('root')
