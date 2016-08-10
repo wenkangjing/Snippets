@@ -4,6 +4,7 @@
 
 ## De normalization
 
+## Table
 
 
 ## TIPS
