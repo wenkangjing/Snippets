@@ -10,6 +10,7 @@ Debug
 
 UI
 - PerfectPixel by WellDoneCode
+- GIMP https://www.gimp.org/
 
 General
 - http://chrispederick.com/work/web-developer/
@@ -30,6 +31,7 @@ WER
 Online verification
 - http://rubular.com/
 - http://scriptular.com/
+- http://www.regular-expressions.info/
 
 
 ## Doc
